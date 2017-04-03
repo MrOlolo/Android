@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Puckman</string>
+    <string name="Start">New Game</string>
+    <string name="Options">Options</string>
+    <string name="About">About?</string>
+    <string name="Exit">Exit</string>
+    <string name="Sound">Sound</string>
+    <string name="Music">Music</string>
+    <string name="AboutText">Здесь также пусто\nкак и у автора\nв душе..</string>
+    <string name="AboutButText">Но ты можешь\nжмякнуть на кнопку</string>
+    <string name="AboutButton">"Жмякни</string>
+
+    <string name="title_activity_game_view">GameView</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">IN THE\nPIPELINE</string>
+    <string name="title_activity_about_screen">Settings</string>
+
+</resources>
