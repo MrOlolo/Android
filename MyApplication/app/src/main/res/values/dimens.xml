@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="aboutText">40sp</dimen>
+    <dimen name="aboutButText">20sp</dimen>
+    <dimen name="aboutTextL">30sp</dimen>
+    <dimen name="aboutButTextL">20sp</dimen>
+    <dimen name="act_Opt_Options">25sp</dimen>
+    <dimen name="act_Opt_Sound">20sp</dimen>
+    <dimen name="act_Opt_Music">20sp</dimen>
+</resources>

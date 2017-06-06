@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.puckman.ololo.puckman.AboutActivity">
+    tools:context="com.puckman.ololo.puckman.AboutActivity"
+    android:weightSum="1">
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="@string/AboutText"
-        android:textSize="40sp"
+        android:text="@string/aboutText"
+        android:textSize="@dimen/aboutText"
         android:textStyle="bold"
         android:textColor="@color/colorOpt"
         android:layout_marginTop="30dp"
@@ -22,22 +22,22 @@
         tools:layout_editor_absoluteY="120dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="200dp"
-        android:text="@string/AboutButText"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorOpt"/>
+        android:gravity="center"
+        android:text="@string/aboutButText"
+        android:textColor="@color/colorOpt"
+        android:textSize="@dimen/aboutButText"
+        android:textStyle="bold" />
 
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="@string/AboutButton"
+        android:text="@string/aboutButton"
         android:textColor="@color/colorYellow" />
 </LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:background="@drawable/main_land"
+    tools:context="com.puckman.ololo.puckman.MainActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-30dp"
+        android:layout_weight="0.76"
+        android:background="@drawable/main_logo" />
+
+    <Button
+        style="@style/MainActivityButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="newGame"
+        android:text="@string/start" />
+
+    <Button
+        style="@style/MainActivityButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="options"
+        android:text="@string/options" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/MainActivityButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="about"
+        android:text="@string/about" />
+
+    <Button
+        style="@style/MainActivityButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:onClick="exit"/>
+
+</LinearLayout>

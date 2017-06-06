@@ -1,23 +1,55 @@
 package com.puckman.ololo.puckman;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+
+import com.puckman.ololo.puckman.Engine.MusicService;
+
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+       // System.out.println("Stop?");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+       // System.out.println("Pause?");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+       // System.out.println("Destroy?");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+       // System.out.println("Resume?");
     }
 
     public void newGame(View view){
-        Intent game = new Intent(this,GameView.class);
+        Intent game = new Intent(this,GameActivity.class);
         startActivity(game);
     }
 
@@ -31,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(about);
     }
 
+
     public void exit(View view){
         this.finishAffinity();
     }
 }
+
