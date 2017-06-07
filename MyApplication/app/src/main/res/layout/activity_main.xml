@@ -13,37 +13,37 @@
 
     <ImageView
         android:background="@drawable/main_logo"
-        android:layout_marginTop="-30dp"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/act_main_imageview_margintop"
+        android:layout_width="@dimen/act_main_imageview_width"
+        android:layout_height="@dimen/act_main_imageview_height"
         android:layout_weight="0.76"
         tools:ignore="ContentDescription,InefficientWeight" />
 
     <Button
         style="@style/MainActivityButtons"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/act_main_newgame_but_height"
         android:onClick="newGame"
         android:text="@string/start"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="180dp" />
+        tools:layout_editor_absoluteX="@dimen/act_main_newgame_but_absX"
+        tools:layout_editor_absoluteY="@dimen/act_main_newgame_but_absY" />
 
     <Button
         style="@style/MainActivityButtons"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/act_main_options_but_width"
+        android:layout_height="@dimen/act_main_options_but_height"
         android:text="@string/options"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="180dp"
+        tools:layout_editor_absoluteX="@dimen/act_main_options_but_absX"
+        tools:layout_editor_absoluteY="@dimen/act_main_options_but_absY"
         android:onClick="options"/>
 
     <Button
         style="@style/MainActivityButtons"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/act_main_about_but_width"
+        android:layout_height="@dimen/act_main_about_but_height"
         android:text="@string/about"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="248dp"
+        tools:layout_editor_absoluteX="@dimen/act_main_about_but_absX"
+        tools:layout_editor_absoluteY="@dimen/act_main_about_but_absY"
         android:onClick="about"/>
 
     <Button
@@ -51,8 +51,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/exit"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="304dp"
+        tools:layout_editor_absoluteX="@dimen/act_main_exit_but_absX"
+        tools:layout_editor_absoluteY="@dimen/act_main_exit_but_absY"
         android:onClick="exit"/>
 
 </LinearLayout>

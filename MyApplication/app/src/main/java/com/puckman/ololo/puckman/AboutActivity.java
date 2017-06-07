@@ -2,8 +2,6 @@ package com.puckman.ololo.puckman;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
 
 public class AboutActivity extends AppCompatActivity {
 

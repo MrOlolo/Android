@@ -1,13 +1,10 @@
 package com.puckman.ololo.puckman;
 
-import android.app.ActivityManager;
-import android.content.Context;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-import com.puckman.ololo.puckman.Engine.MusicService;
 
 
 public class MainActivity extends AppCompatActivity {

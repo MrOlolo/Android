@@ -13,9 +13,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="-30dp"
+        android:layout_width="@dimen/act_main_imageviewL_width"
+        android:layout_height="@dimen/act_main_imageviewL_height"
+        android:layout_marginTop="@dimen/act_main_imageviewL_margintop"
         android:layout_weight="0.76"
         android:background="@drawable/main_logo" />
 

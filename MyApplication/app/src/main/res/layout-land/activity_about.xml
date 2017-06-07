@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/act_about_about_but_textL_margintop"
         android:text="@string/aboutButText"
         android:textSize="@dimen/aboutButTextL"
         android:textStyle="bold"

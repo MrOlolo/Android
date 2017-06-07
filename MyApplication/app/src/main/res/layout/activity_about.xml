@@ -17,16 +17,16 @@
         android:textSize="@dimen/aboutText"
         android:textStyle="bold"
         android:textColor="@color/colorOpt"
-        android:layout_marginTop="30dp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:layout_marginTop="@dimen/act_about_about_text_margintop"
+        tools:layout_editor_absoluteX="@dimen/act_about_about_text_absX"
+        tools:layout_editor_absoluteY="@dimen/act_about_about_text_absY" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="@dimen/act_about_about_but_text_margintop"
         android:gravity="center"
         android:text="@string/aboutButText"
         android:textColor="@color/colorOpt"

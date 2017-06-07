@@ -11,21 +11,15 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.GridLayout;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+
 
 import com.puckman.ololo.puckman.Engine.PaintSettings;
 import com.puckman.ololo.puckman.Engine.PaintSurface;
@@ -56,8 +50,8 @@ public class GameActivity extends Activity implements OnTouchListener{
     int w, h;
     int step;
     int taps;
-    int botsCnt = 3;
-    int checkTaskDelay=1000;
+    private static final int botsCnt = 3;
+    private static final int checkTaskDelay=1000;
     //
     MediaPlayer mp;
     int length=0;
@@ -67,17 +61,23 @@ public class GameActivity extends Activity implements OnTouchListener{
     Sensor sensorMagnet;
     Timer sensorUpdate;
     int rotation;
-    int sensorUpdateDelay=300;
-    int highBord = 20;
-    int lowBord = -20;
+    private static final int sensorUpdateDelay=300;
+    private static final int highBord = 20;
+    private static final int lowBord = -20;
     float[] valuesAccel = new float[3];
     float[] valuesMagnet = new float[3];
     float[] valuesResult = new float[3];
-
     //
     SharedPreferences pref;
     boolean onMusic;
     boolean onGSensor;
+    private static final String landscape = "-1";
+    private static final String portrait = "0";
+    private static final String auto_orient = "1";
+    private static final String pref_orient = "orient_list";
+    private static final String pref_music = "music_switch";
+    private static final String pref_gsensor = "g_sensor_switch";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,17 +85,17 @@ public class GameActivity extends Activity implements OnTouchListener{
         //
         pref= PreferenceManager.getDefaultSharedPreferences(this);
         //
-        String orient= pref.getString("orient_list","1");
-        if(orient.equals("-1")){
+        String orient= pref.getString(pref_orient,auto_orient);
+        if(orient.equals(landscape)){
           //  System.out.println("Land?");
             setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
-        if (orient.equals("0")){
+        if (orient.equals(portrait)){
             setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-        onMusic =pref.getBoolean("music_switch",true);
+        onMusic =pref.getBoolean(pref_music,true);
        // System.out.println("Music="+onMusic);
-        onGSensor =pref.getBoolean("g_sensor_switch",false);
+        onGSensor =pref.getBoolean(pref_gsensor,false);
         //System.out.println("G-Sensor="+onGSensor);
         if(onGSensor){
             sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
