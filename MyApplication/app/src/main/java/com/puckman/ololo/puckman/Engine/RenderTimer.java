@@ -41,6 +41,8 @@ public class RenderTimer extends TimerTask {
             scene.update();
           //  System.out.println("DRASTE");
         } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("исключение перехвачено");
 
         } finally {
             if (canvas != null){

@@ -2,8 +2,6 @@ package com.puckman.ololo.puckman.Engine;
 
 import android.util.DisplayMetrics;
 
-import java.util.Timer;
-
 /**
  * Created by Ololo on 23.04.2017.
  */
@@ -23,12 +21,7 @@ public class PaintSettings {
         PaintSettings.curY= d.heightPixels;
         PaintSettings.scaleX = (double)PaintSettings.curX/(double)PaintSettings.defX;
         PaintSettings.scaleY = (double)PaintSettings.curY/(double)PaintSettings.defY;
-        if (PaintSettings.curX>PaintSettings.curY)
-        {
-            PaintSettings.horizont=true;
-        } else{
-            PaintSettings.horizont=false;
-        }
+        PaintSettings.horizont = PaintSettings.curX > PaintSettings.curY;
         if(PaintSettings.horizont&&PaintSettings.defX==PaintSettings.curY&&PaintSettings.defY==PaintSettings.curX){
             PaintSettings.autoScale=false;
             return;

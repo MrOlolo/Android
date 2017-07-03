@@ -1,10 +1,5 @@
 package com.puckman.ololo.puckman.GameLogic;
 
-import android.content.res.Resources;
-
-import com.puckman.ololo.puckman.Engine.Sprite;
-
-import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +17,7 @@ public class Game implements Runnable {
     public Player user;
     public Drakes[] drake;
     private boolean nLvl;
-    private Thread gameThread= new Thread(this);;
+    private Thread gameThread= new Thread(this);
 
     public void game(){
         map = new GamePlace(lvl);

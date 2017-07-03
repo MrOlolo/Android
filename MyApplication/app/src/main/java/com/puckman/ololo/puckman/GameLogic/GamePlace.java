@@ -116,7 +116,7 @@ public class GamePlace {
         return map;
     }*/
 
-    public void clean() {
+    private void clean() {
         for (int i=0;i<getH(); i++){
             for (int j=0;j<getW();j++){
                 if (i ==0||j==0||i==(getH()-1)||j==(getW()-1)){map[i][j]= Cell.CellType.TABLE;}

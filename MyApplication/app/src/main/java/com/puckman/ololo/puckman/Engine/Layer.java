@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Layer {
     public ArrayList<Render> renders= new ArrayList<>();
-    int level;
+    private int level;
     public Paint p;
     private boolean processing=false;
     public Layer(int level){

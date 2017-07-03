@@ -1,7 +1,5 @@
 package com.puckman.ololo.puckman.GameLogic;
 
-import com.puckman.ololo.puckman.Engine.PaintSettings;
-
 /**
  * Created by Ololo on 10.05.2017.
  */

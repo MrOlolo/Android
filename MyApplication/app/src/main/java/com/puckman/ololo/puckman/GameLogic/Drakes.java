@@ -1,10 +1,5 @@
 package com.puckman.ololo.puckman.GameLogic;
 
-import android.content.res.Resources;
-
-import com.puckman.ololo.puckman.Engine.Sprite;
-import com.puckman.ololo.puckman.R;
-
 /**
  * Created by Ololo on 10.05.2017.
  */

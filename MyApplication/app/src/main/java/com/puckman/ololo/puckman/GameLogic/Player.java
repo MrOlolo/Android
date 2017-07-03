@@ -5,9 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 
-import com.puckman.ololo.puckman.Engine.Render;
 import com.puckman.ololo.puckman.Engine.Sprite;
-import com.puckman.ololo.puckman.R;
 
 /**
  * Created by Ololo on 10.05.2017.
@@ -82,7 +80,7 @@ public class Player extends Sprite {
         w = (height > width) ?  width:height;
         if (dx==1||(dx==0&&dy==0)){
            // sMatr.setRotate(90);
-            matrix.postRotate(angle+0);
+            matrix.postRotate(angle);
             bmp = Bitmap.createBitmap(tmp, 0, 0, tmp.getWidth(), tmp.getHeight(), matrix, true);
             height=h;
             width=w;

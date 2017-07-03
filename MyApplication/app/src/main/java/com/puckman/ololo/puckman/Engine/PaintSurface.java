@@ -12,10 +12,14 @@ import java.util.Timer;
  */
 
 public class PaintSurface extends SurfaceView implements SurfaceHolder.Callback{
-    Scene scene;
-    RenderTimer rendTim;
-    Canvas canv;
-    Timer tim= new Timer();
+    private Scene scene;
+    private RenderTimer rendTim;
+    private Canvas canv;
+    private Timer tim= new Timer();
+
+    PaintSurface(Context context){
+        super(context);
+    }
 
     public PaintSurface(Context context, Scene scene){
         super(context);

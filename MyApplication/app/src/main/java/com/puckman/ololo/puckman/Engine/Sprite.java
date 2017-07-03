@@ -98,8 +98,7 @@ public class Sprite implements Render{
     }
 
     public void resize(double newX, double newY) {
-        Bitmap tmp = Bitmap.createScaledBitmap(bmp,(int)newX,(int)newY,true);
-        bmp=tmp;
+        bmp= Bitmap.createScaledBitmap(bmp,(int)newX,(int)newY,true);
         this.refreshAll();
     }
 

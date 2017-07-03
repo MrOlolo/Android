@@ -36,41 +36,42 @@ import java.util.TimerTask;
 
 public class GameActivity extends Activity implements OnTouchListener{
 
-    Game game;
-    PaintSurface sf;
-    Scene mainScene;
-    Sprite nextLvl;
-    Sprite gameOver;
-    Sprite drake[];
-    Sprite cell_free;
-    Sprite cell_wall;
-    Sprite cell_exit;
-    Timer check;
-    TimerTask checkTask;
-    int w, h;
-    int step;
-    int taps;
+    private Game game;
+    private PaintSurface sf;
+    private Scene mainScene;
+    private Sprite nextLvl;
+    private Sprite gameOver;
+    private Sprite[] drake;
+    private Sprite cell_free;
+    private Sprite cell_wall;
+    private Sprite cell_exit;
+    private Timer check;
+    private TimerTask checkTask;
+    private int w;
+    private int h;
+    private int step;
+    private int taps;
     private static final int botsCnt = 3;
     private static final int checkTaskDelay=1000;
     //
-    MediaPlayer mp;
-    int length=0;
+    private MediaPlayer mp;
+    private int length=0;
     //
-    SensorManager sensorManager;
-    Sensor sensorAccel;
-    Sensor sensorMagnet;
-    Timer sensorUpdate;
-    int rotation;
+    private SensorManager sensorManager;
+    private Sensor sensorAccel;
+    private Sensor sensorMagnet;
+    private Timer sensorUpdate;
+    private int rotation;
     private static final int sensorUpdateDelay=300;
     private static final int highBord = 20;
     private static final int lowBord = -20;
-    float[] valuesAccel = new float[3];
-    float[] valuesMagnet = new float[3];
-    float[] valuesResult = new float[3];
+    private float[] valuesAccel = new float[3];
+    private float[] valuesMagnet = new float[3];
+    private float[] valuesResult = new float[3];
     //
-    SharedPreferences pref;
-    boolean onMusic;
-    boolean onGSensor;
+    private SharedPreferences pref;
+    private boolean onMusic;
+    private boolean onGSensor;
     private static final String landscape = "-1";
     private static final String portrait = "0";
     private static final String auto_orient = "1";
@@ -227,7 +228,7 @@ public class GameActivity extends Activity implements OnTouchListener{
        // System.out.println("OnSave");
     }
 
-    SensorEventListener listener = new SensorEventListener() {
+    private SensorEventListener listener = new SensorEventListener() {
         @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
         }
@@ -235,20 +236,16 @@ public class GameActivity extends Activity implements OnTouchListener{
         public void onSensorChanged(SensorEvent event) {
             switch (event.sensor.getType()) {
                 case Sensor.TYPE_ACCELEROMETER:
-                    for (int i=0; i < 3; i++){
-                        valuesAccel[i] = event.values[i];
-                    }
+                    System.arraycopy(event.values, 0, valuesAccel, 0, 3);
                     break;
                 case Sensor.TYPE_MAGNETIC_FIELD:
-                    for (int i=0; i < 3; i++){
-                        valuesMagnet[i] = event.values[i];
-                    }
+                    System.arraycopy(event.values, 0, valuesMagnet, 0, 3);
                     break;
             }
         }
     };
 
-    void updateSensControl() {
+    private void updateSensControl() {
       //  System.out.println("Orientation: " + (valuesResult));
         if(taps>0){
             int x = (int)valuesResult[2];
@@ -272,7 +269,7 @@ public class GameActivity extends Activity implements OnTouchListener{
       //  System.out.println("tsp="+taps);
     }
 
-    void getDeviceOrientation() {
+    private void getDeviceOrientation() {
         float[] inR = new float[9];
         float[] outR = new float[9];
         SensorManager.getRotationMatrix(inR, null, valuesAccel, valuesMagnet);
@@ -298,7 +295,6 @@ public class GameActivity extends Activity implements OnTouchListener{
         valuesResult[0] = (float) Math.toDegrees(valuesResult[0]);
         valuesResult[1] = (float) Math.toDegrees(valuesResult[1]);
         valuesResult[2] = (float) Math.toDegrees(valuesResult[2]);
-        return;
     }
 
     private boolean initGame(){
@@ -342,7 +338,7 @@ public class GameActivity extends Activity implements OnTouchListener{
         return p;
     }
 
-    public void drawMap(GamePlace map){
+    private void drawMap(GamePlace map){
         mainScene.getLayerByNum(1).cleanRenders();
         mainScene.getLayerByNum(0).cleanRenders();
         mainScene.setCurLayer(0);
@@ -413,7 +409,7 @@ public class GameActivity extends Activity implements OnTouchListener{
 
     }*/
 
-    public void drawPlayers(Player player, Drakes[] drakes){
+    private void drawPlayers(Player player, Drakes[] drakes){
         mainScene.setCurLayer(1);
         player.connectSprite(getResources(),R.drawable.bit_ps3fhd);
         mainScene.addItem(player);
